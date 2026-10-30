@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(160deg, #f4f1ec 0%, #d9d3c9 100%);
+  font-family: "Times New Roman", Times, "Liberation Serif", "Nimbus Roman", serif;
+  color: #1a1a1a;
+}
+
+button,
+input {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.calculator {
+  width: min(92vw, 380px);
+  padding: 10px 12px 14px;
+  background: linear-gradient(180deg, #efe9df 0%, #e4dccf 100%);
+  border: 2px solid #5b5b5b;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-icon {
+  font-size: 1.4rem;
+}
+
+.app-name {
+  font-size: 1.1rem;
+}
+
+.window-controls {
+  display: flex;
+  gap: 14px;
+}
+
+.win-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.win-btn:hover {
+  color: #b00020;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.menu-btn,
+.history-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.mode {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.expression,
+.result {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.expression {
+  font-size: 1.2rem;
+  color: #444;
+  height: 36px;
+}
+
+.result {
+  font-size: clamp(1.8rem, 8vw, 2.4rem);
+  font-weight: normal;
+  height: 54px;
+}
+
+.memory-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.mem-btn {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.mem-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.key {
+  height: clamp(46px, 11vw, 58px);
+  font-size: 1.2rem;
+  background: linear-gradient(180deg, #f8f5ef 0%, #e7e0d3 100%);
+  border: 1px solid #9a9487;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  transition: background 0.15s, transform 0.05s;
+}
+
+.key.number {
+  background: linear-gradient(180deg, #ffffff 0%, #f1ece2 100%);
+  font-weight: bold;
+}
+
+.key.operator {
+  background: linear-gradient(180deg, #f3eee4 0%, #e1d9ca 100%);
+}
+
+.key.equals {
+  background: linear-gradient(180deg, #6fa8dc 0%, #3d85c6 100%);
+  color: #fff;
+  font-weight: bold;
+}
+
+.key:hover {
+  background: #d6cfc0;
+}
+
+.key.equals:hover {
+  background: #2f6fa8;
+}
+
+.key:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  .calculator {
+    width: 100%;
+    padding: 8px 8px 12px;
+  }
+
+  .window-controls {
+    gap: 10px;
+  }
+
+  .key {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .app-name,
+  .mode {
+    font-size: 1rem;
+  }
+
+  .mem-btn {
+    font-size: 0.85rem;
+  }
+
+  .key {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .calculator {
+    width: 400px;
+  }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grace Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+
+        <div class="title-bar">
+            <div class="title-left">
+                <span class="app-icon">🖩</span>
+                <span class="app-name">calculator</span>
+            </div>
+            <div class="window-controls">
+                <button class="win-btn" id="minimize">—</button>
+                <button class="win-btn" id="maximize">▢</button>
+                <button class="win-btn" id="close">✕</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="header-left">
+                <button class="menu-btn" id="menu">☰</button>
+                <h1 class="mode">Standard</h1>
+            </div>
+            <button class="history-btn" id="history">🕘</button>
+        </div>
+
+        <div class="display">
+            <input type="text" class="expression" id="expression" readonly>
+            <input type="text" class="result" id="display" value="0" readonly>
+        </div>
+
+        <div class="memory-row">
+            <button class="mem-btn" onclick="memoryClear()">MC</button>
+            <button class="mem-btn" onclick="memoryRecall()">MR</button>
+            <button class="mem-btn" onclick="memoryAdd()">M+</button>
+            <button class="mem-btn" onclick="memorySubtract()">M-</button>
+            <button class="mem-btn" onclick="memoryStore()">MS</button>
+            <button class="mem-btn" onclick="memorySubtract()">M-</button>
+        </div>
+
+        <div class="keys">
+            <button class="key" onclick="canPercent()">%</button>
+            <button class="key" onclick="canClearEntry()">CE</button>
+            <button class="key" onclick="canClear()">C</button>
+            <button class="key" onclick="canBackspace()">⌫</button>
+
+            <button class="key" onclick="canReciprocal()">1/x</button>
+            <button class="key" onclick="canSquare()">x<sup>2</sup></button>
+            <button class="key" onclick="canSqrt()">√x</button>
+            <button class="key operator" onclick="canGetOperator('/')">÷</button>
+
+            <button class="key number" onclick="canGetVal(7)">7</button>
+            <button class="key number" onclick="canGetVal(8)">8</button>
+            <button class="key number" onclick="canGetVal(9)">9</button>
+            <button class="key operator" onclick="canGetOperator('*')">×</button>
+
+            <button class="key number" onclick="canGetVal(4)">4</button>
+            <button class="key number" onclick="canGetVal(5)">5</button>
+            <button class="key number" onclick="canGetVal(6)">6</button>
+            <button class="key operator" onclick="canGetOperator('-')">-</button>
+
+            <button class="key number" onclick="canGetVal(1)">1</button>
+            <button class="key number" onclick="canGetVal(2)">2</button>
+            <button class="key number" onclick="canGetVal(3)">3</button>
+            <button class="key operator" onclick="canGetOperator('+')">+</button>
+
+            <button class="key" onclick="canNegate()">±</button>
+            <button class="key number" onclick="canGetVal(0)">0</button>
+            <button class="key number" onclick="canGetDecimal()">.</button>
+            <button class="key equals" onclick="canCalculate()">=</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
